@@ -1,14 +1,6 @@
-import {
-  View,
-  Text,
-  StyleSheet,
-  TouchableOpacity,
-  ScrollView,
-  Image,
-  SafeAreaView,
-  StatusBar,
-} from 'react-native';
 import React from 'react';
+import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import icons from '../../constant/icons'; // Make sure this path is correct for your icons
 
 const BillSummary = () => {
   return (
@@ -23,17 +15,19 @@ const BillSummary = () => {
 
       {/* Bill Summary Card */}
       <View style={[styles.card, styles.usageCard]}>
-        <View style={styles.usageRow}>
-          <Text style={styles.usageLabel}>Last Payment</Text>
-          <Text style={styles.usageValue}>£75.50</Text>
+        <View style={styles.buttonColumn}>
+          {/* Add Money Button with Icon */}
+          <TouchableOpacity style={[styles.button, styles.addMoneyButton]}>
+            <Image source={icons.plus} style={styles.buttonIcon} /> {/* Add Money Icon */}
+            <Text style={styles.addMoneyButtonText}>Add Money</Text>
+          </TouchableOpacity>
+
+          {/* Withdraw Button with Icon */}
+          <TouchableOpacity style={[styles.button, styles.withdrawButton]}>
+            <Image source={icons.minus} style={styles.buttonIcon} /> {/* Withdraw Icon */}
+            <Text style={styles.withdrawButtonText}>Withdraw</Text>
+          </TouchableOpacity>
         </View>
-        <View style={styles.usageRow}>
-          <Text style={styles.usageLabel}>Due Date</Text>
-          <Text style={styles.usageValue}>25 Nov 2024</Text>
-        </View>
-        <TouchableOpacity style={styles.topupButton}>
-          <Text style={styles.topupButtonText}>Pay Now</Text>
-        </TouchableOpacity>
       </View>
     </View>
   );
@@ -45,7 +39,7 @@ const styles = StyleSheet.create({
   cardsContainer: {
     flexDirection: 'row',
     padding: 10,
-    paddingBottom:10,
+    paddingBottom: 10,
     backgroundColor: '#EC994B',
   },
   card: {
@@ -53,7 +47,7 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     padding: 16,
     shadowColor: '#000', // Black shadow
-    shadowOffset: {width: 0, height: 2},
+    shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 4,
     elevation: 3,
@@ -66,6 +60,34 @@ const styles = StyleSheet.create({
   usageCard: {
     flex: 6,
     marginLeft: 8,
+  },
+  buttonColumn: {
+    flexDirection: 'column',
+    alignItems: 'stretch',
+    gap: 8, // Adds vertical space between buttons
+  },
+  button: {
+    padding: 16,
+    borderRadius: 8,
+    marginVertical: 4,
+    alignItems: 'center',
+    flexDirection: 'row', // Ensures the icon and text are in a row
+  },
+  addMoneyButton: {
+    backgroundColor: '#15133C', // Green color for Add Money button
+  },
+  addMoneyButtonText: {
+    color: '#FFFFFF', // White text for better contrast
+    fontWeight: 'bold',
+    marginLeft: 8, // Space between the icon and the text
+  },
+  withdrawButton: {
+    backgroundColor: '#15133C', // Red color for Withdraw button
+  },
+  withdrawButtonText: {
+    color: '#FFFFFF', // White text for better contrast
+    fontWeight: 'bold',
+    marginLeft: 8, // Space between the icon and the text
   },
   circleContainer: {
     width: 100,
@@ -92,28 +114,10 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#EC994B', // Dark gray text for the label
   },
-  usageRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginBottom: 12,
-  },
-  usageLabel: {
-    color: '#EC994B', // Dark gray label
-    fontWeight: 'bold',
-  },
-  usageValue: {
-    fontWeight: 'bold',
-    color: '#EC994B', // Black text for value
-  },
-  topupButton: {
-    backgroundColor: '#15133C', // Blue for button
-    borderRadius: 8,
-    padding: 12,
-    alignItems: 'center',
-    marginTop: 8,
-  },
-  topupButtonText: {
-    color: '#F1EEE9',
-    fontWeight: 'bold',
+  buttonIcon: {
+    width: 20,
+    height: 20, // Adjust icon size as necessary
+    tintColor:"#fff",
+    marginRight:10,
   },
 });
