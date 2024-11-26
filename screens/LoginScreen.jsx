@@ -94,7 +94,6 @@ const LoginScreen = () => {
     </View>
   );
 };
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -125,12 +124,12 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   countryPickerContainer: {
-    marginBottom: 20,
+    marginBottom: 10, // Adjusted to match spacing
     borderWidth: 1,
     borderColor: '#d1d1d1',
     borderRadius: 8,
-    padding: 10,
-    height:70,
+    padding: 0, // Removed padding to ensure consistency
+    height: 50, // Made the height consistent with input box
     backgroundColor: '#F1EEE9',
   },
   label: {
@@ -139,18 +138,19 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   picker: {
-    height: 50,
+    height: '100%', // Ensures picker takes full height of container
     width: '100%',
   },
   animatedInputContainer: {
     position: 'relative',
-    height: 50,
+    height: 50, // Same height as the country picker
     borderWidth: 1,
     borderColor: '#d1d1d1',
     borderRadius: 8,
     padding: 10,
     backgroundColor: '#F1EEE9',
     justifyContent: 'center',
+    marginTop: 15, // Added marginTop to create space between boxes
   },
   animatedPlaceholder: {
     position: 'absolute',
@@ -187,5 +187,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
 });
+
+
 
 export default LoginScreen;

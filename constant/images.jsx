@@ -21,7 +21,8 @@ import D2h from '../assets/image/D2h.jpeg';
 import Dishtv from '../assets/image/Dishtv.png';
 import Sun from '../assets/image/Sun.png';
 import Tata from '../assets/image/Tata.jpeg';
-
+import revenue from '../assets/image/revenue.jpg'
+import expenses from '../assets/image/expenses.jpg'
 // Export all images
 export default {
   D2h,
@@ -31,6 +32,8 @@ export default {
   audio,
   Sun,
   gaming,
+  revenue,
+  expenses,
   cameras,
   laptop1,
   consoles,

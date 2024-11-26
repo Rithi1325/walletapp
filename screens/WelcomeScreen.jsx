@@ -22,7 +22,7 @@ const WelcomeScreen = ({ navigation }) => {
     <View style={styles.container}>
       <TouchableOpacity style={styles.centerArea} onPress={handleCenterPress}>
         <View style={styles.header}>
-          <Image source={icons.logo} style={styles.logo} />
+        <Image source={icons.logo} style={[styles.logo, { tintColor: 'blue' }]} />
           <View style={styles.textContainer}>
             <Text style={styles.textTitle}>ZEROFIVEZ</Text>
             <Text style={styles.subText}>Easy way to success</Text>
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   logo: {
-    width: 80,
+    width: 60,
     height: 80,
     resizeMode: 'contain',
     marginRight: 10,

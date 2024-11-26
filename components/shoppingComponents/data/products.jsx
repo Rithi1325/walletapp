@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { View, Text, Image, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
 import images from '../../../constant/images'; // Ensure correct paths for images
 import icons from '../../../constant/icons'; // Ensure correct paths for icons
-import AddToCartButton from '../AddToCartButton';
+import AddToCartButton from '../AddToCartButton'; // Make sure this path is correct
 
 const ProductGrid = () => {
   const products = [
@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
     height: 24,
   },
   productInfo: {
-    gap: 4,
+    marginBottom: 4,
   },
   productName: {
     fontSize: 14,

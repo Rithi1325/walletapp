@@ -23,14 +23,14 @@ const styles = StyleSheet.create({
   },
   outline: {
     borderWidth: 1,
-    borderColor: '#007BFF',
+    borderColor: '#15133C',
     backgroundColor: 'transparent',
   },
   outlineText: {
-    color: '#007BFF',
+    color: '#15133C',
   },
   filled: {
-    backgroundColor: '#007BFF',
+    backgroundColor: '#15133C',
   },
   filledText: {
     color: '#FFF',

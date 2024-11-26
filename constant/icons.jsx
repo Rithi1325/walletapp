@@ -35,6 +35,7 @@ import heart from '../assets/icon/heart.png';
 import bankTransfer from '../assets/icon/bankTransfer.png';
 import payContact from '../assets/icon/payContact.png';
 import selfTransfer from '../assets/icon/selfTransfer.png';
+import menu from '../assets/icon/menu.png';
 
 export default {
   w1,
@@ -74,4 +75,5 @@ export default {
   bankTransfer,
   payContact,
   selfTransfer,
+  menu,
 };

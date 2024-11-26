@@ -1,5 +1,6 @@
 import React from 'react';
 import { TouchableOpacity, Text, StyleSheet } from 'react-native';
+import PropTypes from 'prop-types'; // Optional, for PropTypes validation
 
 const AddToCartButton = ({ isInCart = false, onPress }) => {
   return (
@@ -14,14 +15,20 @@ const AddToCartButton = ({ isInCart = false, onPress }) => {
   );
 };
 
+// Optional: PropTypes validation (useful for larger projects)
+AddToCartButton.propTypes = {
+  isInCart: PropTypes.bool,
+  onPress: PropTypes.func.isRequired,
+};
+
 const styles = StyleSheet.create({
   button: {
-    paddingVertical: 8,
-    paddingHorizontal: 12,
+    paddingVertical: 10, // Adjusted for better spacing
+    paddingHorizontal: 16, // Adjusted for better spacing
     borderRadius: 4,
-    marginTop: 8,
+    marginTop: 12, // Adjusted for consistent layout
     alignItems: 'center',
-    justifyContent: 'center', // Ensure the text is centered properly
+    justifyContent: 'center',
   },
   text: {
     color: '#fff',
