@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
   },
   highlight: {
     fontWeight: 'bold',
-    color: '#EC994B',
+    color: '#efbf04',
   },
   subText: {
     fontSize: 14,

@@ -18,13 +18,13 @@ const BillSummary = () => {
         <View style={styles.buttonColumn}>
           {/* Add Money Button with Icon */}
           <TouchableOpacity style={[styles.button, styles.addMoneyButton]}>
-            <Image source={icons.plus} style={styles.buttonIcon} /> {/* Add Money Icon */}
+            <Image source={icons.plus} style={styles.buttonIcon} /> 
             <Text style={styles.addMoneyButtonText}>Add Money</Text>
           </TouchableOpacity>
 
           {/* Withdraw Button with Icon */}
           <TouchableOpacity style={[styles.button, styles.withdrawButton]}>
-            <Image source={icons.minus} style={styles.buttonIcon} /> {/* Withdraw Icon */}
+            <Image source={icons.minus} style={styles.buttonIcon} />
             <Text style={styles.withdrawButtonText}>Withdraw</Text>
           </TouchableOpacity>
         </View>
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     padding: 10,
     paddingBottom: 10,
-    backgroundColor: '#EC994B',
+    backgroundColor: '#efbf04',
   },
   card: {
     backgroundColor: '#F1EEE9', // Light gray (silver tone) for cards
@@ -71,52 +71,66 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     marginVertical: 4,
     alignItems: 'center',
-    flexDirection: 'row', // Ensures the icon and text are in a row
+    flexDirection: 'row',
   },
   addMoneyButton: {
-    backgroundColor: '#15133C', // Green color for Add Money button
+    backgroundColor: '#28A745', 
+    borderColor: '#FFD700',
+    borderWidth: 2,
+    shadowColor: '#FFD700', 
+    shadowOffset: { width: 0, height: 0 }, 
+    shadowOpacity: 0.6, 
+    shadowRadius: 6,
+    elevation: 5, 
   },
   addMoneyButtonText: {
-    color: '#FFFFFF', // White text for better contrast
+    color: '#FFFFFF', 
     fontWeight: 'bold',
-    marginLeft: 8, // Space between the icon and the text
+    marginLeft: 8,
   },
   withdrawButton: {
-    backgroundColor: '#15133C', // Red color for Withdraw button
+    backgroundColor: '#15133C',
+    borderColor: '#FFD700',
+    borderWidth: 2, 
+    shadowColor: '#FFD700',
+    shadowOffset: { width: 0, height: 0 }, 
+    shadowOpacity: 0.6,
+    shadowRadius: 6, // Glow spread
+    elevation: 5, 
   },
   withdrawButtonText: {
-    color: '#FFFFFF', // White text for better contrast
+    color: '#FFFFFF',
     fontWeight: 'bold',
-    marginLeft: 8, // Space between the icon and the text
+    marginLeft: 8, 
   },
   circleContainer: {
     width: 100,
     height: 100,
     borderRadius: 50,
     borderWidth: 4,
-    borderColor: '#15133C', // Light gold color for the border
+    borderColor: '#15133C',
     alignItems: 'center',
     justifyContent: 'center',
   },
   dataAmount: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#EC994B', // Black text for amount
+    color: '#efbf04',
   },
   dataUnit: {
     fontSize: 14,
     fontWeight: 'bold',
-    color: '#EC994B', // Black text for unit
+    color: '#efbf04', 
   },
   cardLabel: {
     marginTop: 8,
     fontSize: 14,
     fontWeight: 'bold',
-    color: '#EC994B', // Dark gray text for the label
+    color: '#efbf04', 
   },
   buttonIcon: {
     width: 20,
-    height: 20, // Adjust icon size as necessary
+    height: 20, 
     tintColor:"#fff",
     marginRight:10,
   },

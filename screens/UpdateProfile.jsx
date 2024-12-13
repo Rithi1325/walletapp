@@ -9,21 +9,35 @@ import {
   Image,
 } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
-import icons from '../constant/icons';
-import { useNavigation } from '@react-navigation/native'; // React Navigation
+import { useNavigation } from '@react-navigation/native';
+import images from '../constant/images';
 
 const UpdateProfile = ({ route, navigate }) => {
   const params = route?.params || {};
 
   const [fullName, setFullName] = useState(params.fullName || '');
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState(params.email || '');
   const [gender, setGender] = useState('Male');
   const [referralCode, setReferralCode] = useState('');
   const navigation = useNavigation();
 
+  const isValidEmail = (email) => {
+    const regex = /\S+@\S+\.\S+/;
+    return regex.test(email);
+  };
+
+  const isAlphabetic = (text) => {
+    return /^[A-Za-z]+$/.test(text);
+  };
+
   const handleFinishSetup = () => {
-    if (!fullName.trim()) { // Make sure to trim whitespace and check empty string
-      Alert.alert('Error', 'Full name cannot be empty.');
+    if (!fullName.trim() || !isAlphabetic(fullName)) { // Make sure to trim whitespace and check empty string and alphabetic characters
+      Alert.alert('Error', 'Full name can only contain alphabetic characters.');
+      return;
+    }
+
+    if (email && !isValidEmail(email)) { // Validate email format
+      Alert.alert('Error', 'Please enter a valid email address.');
       return;
     }
 
@@ -39,9 +53,8 @@ const UpdateProfile = ({ route, navigate }) => {
   return (
     <View style={styles.container}>
       {/* Display the Update Profile Image */}
-      <Image source={icons.updateProfile} style={styles.profileImage} />
+      <Image source={images.update} style={styles.profileImage} />
 
-      <Text style={styles.title}>Update Profile</Text>
       <Text style={styles.subtitle}>
         Please enter the below details to complete your account setup
       </Text>
@@ -96,15 +109,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   profileImage: {
-    width: 100, // Set a width for the image
-    height: 100, // Set a height for the image
-    marginBottom: 20, // Space below the image
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: '#15133C',
-    marginBottom: 10,
+    width: 300,
+    height: 300, 
+    marginBottom: 20, 
   },
   subtitle: {
     fontSize: 16,
@@ -134,7 +141,7 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   button: {
-    backgroundColor: '#EC994B',
+    backgroundColor: '#efbf04',
     paddingVertical: 15,
     width: '100%',
     borderRadius: 8,

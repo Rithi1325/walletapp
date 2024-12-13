@@ -1,11 +1,11 @@
 // ShoppingScreen.jsx
 import React from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
-import SearchBar from '../../components/shoppingComponents/SearchBar.jsx';
-import Banner from '../../components/shoppingComponents/Banner.jsx';
-import CategoryList from '../../components/shoppingComponents/CategoryList.jsx';
-import ProductList from '../../components/shoppingComponents/data/products.jsx';
-import AdSwiper from '../../components/swiperComponents/AdSwiper.jsx';
+import SearchBar from '../components/shoppingComponents/SearchBar.jsx';
+import Banner from '../components/shoppingComponents/Banner.jsx';
+import CategoryList from '../components/shoppingComponents/CategoryList.jsx';
+import ProductList from '../components/shoppingComponents/data/products.jsx';
+import AdSwiper from '../components/swiperComponents/AdSwiper.jsx';
 
 
 const ShoppingScreen = () => {

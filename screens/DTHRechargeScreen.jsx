@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, Text, SafeAreaView, StyleSheet } from 'react-native';
-import ProviderCard from '../../components/dthComponents/ProviderCard';
-import images from '../../constant/images';
-import SearchBar from '../../components/dthComponents/SearchBar';
+import ProviderCard from '../components/dthComponents/ProviderCard';
+import images from '../constant/images';
+import SearchBar from '../components/dthComponents/SearchBar';
 
 const providers = [
   { id: '1', name: 'Dish Tv', image: images.Dishtv },

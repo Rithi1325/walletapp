@@ -1,11 +1,11 @@
 import React from 'react';
 import { View, Image } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import HomeScreen from '../screens/Home/HomeScreen';
-import TransactionScreen from '../screens/Transaction/TransactionScreen';
-import ReportScreen from '../screens/Report/Report';
-import ChatScreen from '../screens/Chat/ChatScreen';
-import HelpScreen from '../screens/Help/HelpScreen'; // Import the Help screen
+import HomeScreen from '../screens/HomeScreen';
+import TransactionScreen from '../screens/TransactionScreen';
+import ReportScreen from '../screens/Report';
+import ChatScreen from '../screens/ChatScreen';
+import HelpScreen from '../screens/HelpScreen'; // Import the Help screen
 const Tab = createBottomTabNavigator();
 import icons from '../constant/icons';
 
@@ -16,7 +16,7 @@ const TabNavigator = () => {
         tabBarActiveTintColor: '#F1EEE9', // Active icon color
         tabBarInactiveTintColor: '#15133C', // Inactive icon color
         tabBarStyle: {
-          backgroundColor: '#EC994B', // Tab bar background color
+          backgroundColor: '#efbf04', // Tab bar background color
           height: 75,
           paddingTop:10,
           borderTopLeftRadius:20,

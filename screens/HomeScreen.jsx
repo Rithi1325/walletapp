@@ -9,11 +9,11 @@ import {
   StatusBar,
 } from 'react-native';
 
-import PromotionBanner from '../../components/homeComponents/PromotionBanner.jsx';
-import UtilityServices from '../../components/homeComponents/UtilityServices.jsx';
-import BillSummary from '../../components/homeComponents/BillSummary.jsx';
-import OfferSwipers from '../../components/swiperComponents/OfferSwipers.jsx';
-import TransferOptions from '../../components/homeComponents/TransferOptions.jsx';
+import PromotionBanner from '../components/homeComponents/PromotionBanner.jsx';
+import UtilityServices from '../components/homeComponents/UtilityServices.jsx';
+import BillSummary from '../components/homeComponents/BillSummary.jsx';
+import OfferSwipers from '../components/swiperComponents/OfferSwipers.jsx';
+import TransferOptions from '../components/homeComponents/TransferOptions.jsx';
 
 const HomeScreen = () => {
   return (
@@ -53,10 +53,10 @@ const HomeScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#EC994B', // Gold
+    backgroundColor: '#efbf04', // Gold
   },
   header: {
-    backgroundColor: '#EC994B', // Gold
+    backgroundColor: '#efbf04', // Gold
     paddingHorizontal: 16,
     paddingTop: 16,
     paddingBottom: 8,

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'; // Optional, for PropTypes validation
 const AddToCartButton = ({ isInCart = false, onPress }) => {
   return (
     <TouchableOpacity
-      style={[styles.button, { backgroundColor: isInCart ? '#EC994B' : '#15133C' }]}
+      style={[styles.button, { backgroundColor: isInCart ? '#efbf04' : '#15133C' }]}
       onPress={onPress}
     >
       <Text style={styles.text}>

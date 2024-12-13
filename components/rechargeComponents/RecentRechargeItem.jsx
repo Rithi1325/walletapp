@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
   },
   rechargeButton: {
-    backgroundColor: '#EC994B',
+    backgroundColor: '#efbf04',
     paddingHorizontal: 12,
     paddingVertical: 6,
     borderRadius: 8,

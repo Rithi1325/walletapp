@@ -3,8 +3,8 @@ import w2 from '../assets/icon/w2.png';
 import w3 from '../assets/icon/w3.png';
 import logo from '../assets/icon/logo.png';
 import soundWaves from '../assets/icon/sound-waves.png';
-import login from '../assets/icon/login.png';
-import updateProfile from '../assets/icon/update.png';
+// import login from '../assets/icon/login.png';
+// import updateProfile from '../assets/icon/update.png';
 import home from '../assets/icon/home.png';
 import report from '../assets/icon/report.png';
 import transaction from '../assets/icon/transaction.png';
@@ -44,8 +44,8 @@ export default {
   logo,
   heart,
   soundWaves,
-  login,
-  updateProfile,
+  // login,
+  // updateProfile,
   home,
   report,
   transaction,

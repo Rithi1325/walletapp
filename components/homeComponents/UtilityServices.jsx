@@ -23,14 +23,14 @@ const UtilityServices = () => {
             <Text style={styles.optionText}>Mobile</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.optionItem}>
+          <TouchableOpacity style={styles.optionItem} onPress={() => navigation.navigate('WaterBill')}>
             <View style={styles.iconContainer}>
               <Image source={icons.water} style={styles.optionIcon} />
             </View>
             <Text style={styles.optionText}>Water Bill</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.optionItem}>
+          <TouchableOpacity style={styles.optionItem}  onPress={() => navigation.navigate('pipescreen')} >
             <View style={styles.iconContainer}>
               <Image source={icons.pipe} style={styles.optionIcon} />
             </View>
@@ -47,19 +47,7 @@ const UtilityServices = () => {
             <Text style={styles.optionText}>Electricity</Text>
           </TouchableOpacity>
 
-          {/* Conditional rendering of the Electricity card */}
-          {showElectricityCard && (
-            <View style={[styles.card, styles.newCard]}>
-              <Image source={icons.card} style={styles.cardImage} />
-              <Text style={styles.newCardText}>Electricity Bill Details</Text>
-              <Text style={styles.cardDescription}>
-                Review your latest electricity bill and payment options.
-              </Text>
-              <TouchableOpacity style={styles.viewOffersButton}>
-                <Text style={styles.viewOffersButtonText}>View Details</Text>
-              </TouchableOpacity>
-            </View>
-          )}
+       
           <TouchableOpacity
             style={styles.optionItem}
             onPress={() => navigation.navigate('ShopScreen')} // Navigate to ShopScreen
@@ -72,7 +60,7 @@ const UtilityServices = () => {
 
           {showMoreOptions && (
             <>
-              <TouchableOpacity style={styles.optionItem}>
+              <TouchableOpacity style={styles.optionItem} onPress={() => navigation.navigate('gasscreen')} >
                 <View style={styles.iconContainer}>
                   <Image source={icons.gas} style={styles.optionIcongas} />
                 </View>

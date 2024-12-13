@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, FlatList, StyleSheet } from 'react-native';
-import Button from '../../components/transactionComponents/Button';
+import Button from '../components/transactionComponents/Button';
 // import Header from '../../components/transactionComponents/Header';
 
 const TransactionScreen = ({ navigation }) => {

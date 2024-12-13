@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet, ScrollView, Image } from 'react-native';
 import React from 'react';
-import images from '../../constant/images'; // Assuming images are correctly imported
+import images from '../constant/images'; // Assuming images are correctly imported
 
 const Report = () => {
   return (

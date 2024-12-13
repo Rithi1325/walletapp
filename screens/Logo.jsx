@@ -7,10 +7,7 @@ const Logo = () => {
   return (
     <View style={styles.header}>
       <Image source={icons.logo} style={styles.logo} />
-      <View style={styles.textContainer}>
-        <Text style={styles.textTitle}>ZEROFIVEZ</Text>
-        <Text style={styles.subText}>Easy way to success</Text>
-      </View>
+
     </View>
   );
 };
@@ -22,11 +19,10 @@ const styles = StyleSheet.create({
     marginLeft:10,
   },
   logo: {
-    width: 30,
-    height: 30,
+    width:200,
+    height: 200,
     resizeMode: 'contain',
     marginRight: 10,
-    tintColor:'#fff',
   },
   textContainer: {
     justifyContent: 'center',

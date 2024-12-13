@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
-import Button from '../../components/transactionComponents/Button';
+import Button from '../components/transactionComponents/Button';
 
 const BankTransferScreen = () => {
   return (

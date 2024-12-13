@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, Animated, Image } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
-import icons from '../constant/icons';
+import images from '../constant/images';
 import { useNavigation } from '@react-navigation/native';
 
 const LoginScreen = () => {
@@ -41,8 +41,8 @@ const LoginScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Image source={icons.login} style={[styles.logo]} />
-      <Text style={styles.title}>Authentication</Text>
+      <Image source={images.login} style={[styles.login]} />
+      {/* <Text style={styles.title}>Authentication</Text> */}
       <Text style={styles.subtitle}>Login with mobile number</Text>
 
       <View style={styles.inputContainer}>
@@ -102,9 +102,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
     padding: 20,
   },
-  logo: {
-    width: 100,
-    height: 100,
+  login: {
+    width: 300,
+    height: 300,
     marginBottom: 20,
   },
   title: {
@@ -165,7 +165,7 @@ const styles = StyleSheet.create({
     color: '#000',
   },
   button: {
-    backgroundColor: '#EC994B',
+    backgroundColor: '#efbf04',
     paddingVertical: 15,
     width: '100%',
     borderRadius: 8,
@@ -183,7 +183,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   linkText: {
-    color: '#EC994B',
+    color: '#efbf04',
     fontWeight: 'bold',
   },
 });

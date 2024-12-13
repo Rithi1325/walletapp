@@ -6,7 +6,7 @@ const WelcomeScreen = ({ navigation }) => {
   useEffect(() => {
     // Set a 2-second timer to navigate to LoginScreen
     const timer = setTimeout(() => {
-      navigation.navigate('Login');  // Navigate to LoginScreen after 2 seconds
+      navigation.navigate('Login'); // Navigate to LoginScreen after 2 seconds
     }, 2000);
 
     // Clean up the timer if the component is unmounted
@@ -22,11 +22,7 @@ const WelcomeScreen = ({ navigation }) => {
     <View style={styles.container}>
       <TouchableOpacity style={styles.centerArea} onPress={handleCenterPress}>
         <View style={styles.header}>
-        <Image source={icons.logo} style={[styles.logo, { tintColor: 'blue' }]} />
-          <View style={styles.textContainer}>
-            <Text style={styles.textTitle}>ZEROFIVEZ</Text>
-            <Text style={styles.subText}>Easy way to success</Text>
-          </View>
+          <Image source={icons.logo} style={[styles.logo]} />
         </View>
 
         {/* Replace text with the sound wave image */}
@@ -65,21 +61,14 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   logo: {
-    width: 60,
-    height: 80,
+    width: 300,
+    height: 300,
     resizeMode: 'contain',
     marginRight: 10,
   },
   textContainer: {
     justifyContent: 'center',
     alignItems: 'flex-start',
-  },
-  textTitle: {
-    fontSize: 28,
-    color: '#0072FF',
-    fontStyle: 'italic',
-    fontWeight:"bold",
-    letterSpacing: 1.5,
   },
   subText: {
     fontSize: 14,
@@ -92,7 +81,7 @@ const styles = StyleSheet.create({
     height: 60,
     resizeMode: 'contain',
     marginVertical: 20,
-    tintColor:"#EC994B"
+    tintColor: "#efbf04",
   },
   footer: {
     flexDirection: 'row',

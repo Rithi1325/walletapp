@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingHorizontal: 16,
     paddingVertical: 20,
-    backgroundColor: '#EC994B',
+    backgroundColor: '#efbf04',
     width: width,
   },
   optionContainer: {

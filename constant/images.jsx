@@ -21,9 +21,12 @@ import D2h from '../assets/image/D2h.jpeg';
 import Dishtv from '../assets/image/Dishtv.png';
 import Sun from '../assets/image/Sun.png';
 import Tata from '../assets/image/Tata.jpeg';
-import revenue from '../assets/image/revenue.jpg'
-import expenses from '../assets/image/expenses.jpg'
-// Export all images
+import revenue from '../assets/image/revenue.jpg';
+import expenses from '../assets/image/expenses.jpg';
+import otp from "../assets/image/otp.png";
+import login from "../assets/image/login.png";
+import update from "../assets/image/update.png";
+
 export default {
   D2h,
   Dishtv,
@@ -50,4 +53,7 @@ export default {
   sw1,
   sw2,
   sw3,
+  otp,
+ login,
+update
 };

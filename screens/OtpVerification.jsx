@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity, Alert } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, Alert, Image } from 'react-native';
+import images from '../constant/images';
 
 const OtpVerification = ({ route, navigation }) => {
   const { mobileNumber } = route.params; // Get the mobile number from route parameters
@@ -48,6 +49,9 @@ const OtpVerification = ({ route, navigation }) => {
 
   return (
     <View style={styles.container}>
+      {/* Add the image at the top */}
+      <Image source={images.otp} style={styles.image} />
+      
       <Text style={styles.title}>Enter OTP</Text>
       <Text style={styles.subtitle}>An OTP has been sent to {mobileNumber}</Text>
 
@@ -85,6 +89,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
     padding: 20,
   },
+  image: {
+    width: 300,
+    height: 300,
+    marginBottom: 20,
+    resizeMode: 'contain',
+  },
   title: {
     fontSize: 24,
     fontWeight: '600',
@@ -113,7 +123,7 @@ const styles = StyleSheet.create({
     margin: 5,
   },
   button: {
-    backgroundColor: '#EC994B',
+    backgroundColor: '#efbf04',
     paddingVertical: 15,
     width: '100%',
     borderRadius: 8,
