@@ -1,10 +1,9 @@
-import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import DrawerNavigator from './navigation/DrawerNavigator';
-import Index from './navigation/Index';
-import StackNavigator from './navigation/StackNavigator';
 import 'react-native-reanimated';
-import {createStackNavigator} from '@react-navigation/stack';
+
+import { NavigationContainer } from '@react-navigation/native';
+import React from 'react';
+
+import StackNavigator from './navigation/StackNavigator';
 
 export default function App() {
   return (
