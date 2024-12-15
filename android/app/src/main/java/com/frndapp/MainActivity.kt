@@ -1,4 +1,4 @@
-package com.frndapp
+package com.wallet
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
