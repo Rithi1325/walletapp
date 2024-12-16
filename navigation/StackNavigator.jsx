@@ -1,7 +1,7 @@
 import React from 'react';
 import { TouchableOpacity, Image } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
-import WelcomeScreen from '../screens/WelcomeScreen.jsx';
+// import WelcomeScreen from '../screens/WelcomeScreen.jsx';
 import LoginScreen from '../screens/LoginScreen.jsx';
 import OtpVerification from '../screens/OtpVerification.jsx';
 import UserDetails from '../screens/UpdateProfile.jsx';
@@ -28,7 +28,7 @@ const Stack = createStackNavigator();
 const StackNavigator = () => {
   return (
     <Stack.Navigator
-      initialRouteName="Welcome"
+      initialRouteName="Login"
     screenOptions={{
         // Default header style and card background color
         cardStyle: { backgroundColor: '#F1EEE9' },
@@ -36,11 +36,11 @@ const StackNavigator = () => {
         headerTintColor: '#F1EEE9', // Set header text/icon color
         headerTitleStyle: { fontWeight: 'bold' }, // Optional: Make the title bold
       }}>
-      <Stack.Screen
+      {/* <Stack.Screen
         name="Welcome"
         component={WelcomeScreen}
         options={{ title: 'Welcome',headerShown: false, }}
-      />
+      /> */}
       <Stack.Screen
         name="Login"
         component={LoginScreen}
