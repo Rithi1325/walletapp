@@ -77,6 +77,8 @@ dependencies {
     implementation project(':react-native-svg')
     implementation project(':react-native-vector-icons')
     implementation("com.facebook.react:react-android")
+   implementation 'com.razorpay:checkout:1.6.20'
+
 
     if (hermesEnabled.toBoolean()) {
         implementation("com.facebook.react:hermes-android")

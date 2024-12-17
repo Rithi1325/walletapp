@@ -1,8 +1,35 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
-import icons from '../../constant/icons'; // Make sure this path is correct for your icons
+import {View, Text, StyleSheet, TouchableOpacity, Image} from 'react-native';
+import { Alert} from 'react-native';
+import icons from '../../constant/icons';
+import RazorpayCheckout from 'react-native-razorpay';
+import { environment } from '../config/env-config/dev';
 
 const BillSummary = () => {
+  const initiatePayment = () => {
+    const options = {
+      description: 'Purchase description',
+      currency: environment.razorpay.razorpayCurrency,
+      key: environment.razorpay.keyId,
+      amount: '100000',
+      name: 'Wallet',
+      prefill: {
+        email: 'test@ultrafly.com',
+        contact: '1231231230',
+        name: 'Ultrafly',
+      },
+      theme: {color: '#53a20e'},
+    };
+
+    RazorpayCheckout.open(options)
+      .then(data => {
+        Alert.alert(`Success: ${data.razorpay_payment_id}`);
+      })
+      .catch(error => {
+        Alert.alert(`Error: ${error.description}`);
+      });
+  };
+
   return (
     <View style={styles.cardsContainer}>
       <View style={[styles.card, styles.dataCard]}>
@@ -17,8 +44,10 @@ const BillSummary = () => {
       <View style={[styles.card, styles.usageCard]}>
         <View style={styles.buttonColumn}>
           {/* Add Money Button with Icon */}
-          <TouchableOpacity style={[styles.button, styles.addMoneyButton]}>
-            <Image source={icons.plus} style={styles.buttonIcon} /> 
+          <TouchableOpacity
+            style={[styles.button, styles.addMoneyButton]}
+            onPress={initiatePayment}>
+            <Image source={icons.plus} style={styles.buttonIcon} />
             <Text style={styles.addMoneyButtonText}>Add Money</Text>
           </TouchableOpacity>
 
@@ -47,7 +76,7 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     padding: 16,
     shadowColor: '#000', // Black shadow
-    shadowOffset: { width: 0, height: 2 },
+    shadowOffset: {width: 0, height: 2},
     shadowOpacity: 0.1,
     shadowRadius: 4,
     elevation: 3,
@@ -74,34 +103,34 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   addMoneyButton: {
-    backgroundColor: '#28A745', 
+    backgroundColor: '#28A745',
     borderColor: '#FFD700',
     borderWidth: 2,
-    shadowColor: '#FFD700', 
-    shadowOffset: { width: 0, height: 0 }, 
-    shadowOpacity: 0.6, 
+    shadowColor: '#FFD700',
+    shadowOffset: {width: 0, height: 0},
+    shadowOpacity: 0.6,
     shadowRadius: 6,
-    elevation: 5, 
+    elevation: 5,
   },
   addMoneyButtonText: {
-    color: '#FFFFFF', 
+    color: '#FFFFFF',
     fontWeight: 'bold',
     marginLeft: 8,
   },
   withdrawButton: {
     backgroundColor: '#15133C',
     borderColor: '#FFD700',
-    borderWidth: 2, 
+    borderWidth: 2,
     shadowColor: '#FFD700',
-    shadowOffset: { width: 0, height: 0 }, 
+    shadowOffset: {width: 0, height: 0},
     shadowOpacity: 0.6,
     shadowRadius: 6, // Glow spread
-    elevation: 5, 
+    elevation: 5,
   },
   withdrawButtonText: {
     color: '#FFFFFF',
     fontWeight: 'bold',
-    marginLeft: 8, 
+    marginLeft: 8,
   },
   circleContainer: {
     width: 100,
@@ -120,18 +149,18 @@ const styles = StyleSheet.create({
   dataUnit: {
     fontSize: 14,
     fontWeight: 'bold',
-    color: '#efbf04', 
+    color: '#efbf04',
   },
   cardLabel: {
     marginTop: 8,
     fontSize: 14,
     fontWeight: 'bold',
-    color: '#efbf04', 
+    color: '#efbf04',
   },
   buttonIcon: {
     width: 20,
-    height: 20, 
-    tintColor:"#fff",
-    marginRight:10,
+    height: 20,
+    tintColor: '#fff',
+    marginRight: 10,
   },
 });
